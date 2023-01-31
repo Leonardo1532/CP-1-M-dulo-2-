@@ -35,7 +35,7 @@ if (!(TerminaOTrabalho) || !(TenhoCompromisso)) {
 // 1.3.2
 var numero = 8
 
-numero % 97 == 0 ? console.log("Este número não é um número primo") : console.log("Este número é um número primo")
+numero % 1 === 0 && numero % numero === 0 ? console.log("Este número não é um número primo") : console.log("Este número é um número primo")
 
 
 // 1.3.3
@@ -44,3 +44,50 @@ var hora = 1
 var minutos = 0
 
 hora > 0 ? minutos = hora * 60 : minutos = 60
+
+// 1.4.1
+
+var lista = [12, 6, 9, 42, 11, 102, 44, 15]
+var soma = 0
+for (let index = 0; index < lista.length; index++) {
+    soma = soma + lista[index]
+}
+console.log(soma)
+
+var contador = 0
+var soma2 = 0
+while (contador < lista.length) {
+    soma2 = soma2 + lista[contador]
+    contador++
+}
+console.log(soma2)
+
+var soma3 = 0
+var contador2 = 0
+do {
+    soma3 = soma3 + lista[contador2]
+    contador2++
+} while (contador2 < lista.length);
+console.log(soma3)
+
+// 1.4.2
+
+for (let index = 0; index < 10; index++) {
+    var primo = index
+    console.log(primo)
+    if (primo % 1 === 0 && primo % primo === 0) {
+        if (primo === 1) {
+            continue;
+        } else {
+            console.log("O primeiro número primo é: " + primo)
+            break;
+        }
+    }
+}
+
+for (let index = 0; index < 100; index++) {
+    if (index > 39 && index < 51) {
+        continue;
+    }
+    console.log(index)
+}
