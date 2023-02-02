@@ -33,9 +33,9 @@ if (!(TerminaOTrabalho) || !(TenhoCompromisso)) {
 }
 
 // 1.3.2
-var numero = 8
+var numero = 5
 
-numero % 1 === 0 && numero % numero === 0 ? console.log("Este número não é um número primo") : console.log("Este número é um número primo")
+numero % 1 === 0 && numero % numero === 0 ? console.log("Este número é um número primo") : console.log("Este número não é um número primo")
 
 
 // 1.3.3
@@ -90,4 +90,25 @@ for (let index = 0; index < 100; index++) {
         continue;
     }
     console.log(index)
+}
+
+let nome
+let senha
+function Usuario() {
+    nome = prompt("Insira um nome")
+    senha = prompt("Insira uma senha")
+}
+
+let Nome
+let Senha
+function Usuario2(nome, senha) {
+
+    Nome = prompt("Insira um nome existente")
+    Senha = prompt("Insira uma senha existente")
+
+    if (nome == Nome && senha == Senha) {
+        return true
+    } else {
+        return false
+    }
 }
