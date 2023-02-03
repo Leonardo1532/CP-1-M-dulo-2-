@@ -92,6 +92,8 @@ for (let index = 0; index < 100; index++) {
     console.log(index)
 }
 
+// 1.5.1 e 1.5.2 e 1.5.3
+
 let nome
 let senha
 function Usuario() {
@@ -111,4 +113,102 @@ function Usuario2(nome, senha) {
     } else {
         return false
     }
+}
+
+// 1.6.1
+
+var idade
+function ConfirmarDados(nome) {
+    var nomeCompleto = nome + " da Silva"
+    function getAnoNascimento() {
+        idade = 20
+        var ano = 2022 - idade
+        return ano
+    }
+    console.log("Nome completo: " + nomeCompleto)
+    console.log("Ano de nascimento: " + getAnoNascimento())
+    console.log("Idade:  " + idade)
+}
+
+// 1.6.2
+
+let geracao
+
+let idade2
+
+function ConfirmarDados2(nome) {
+    const nomeCompleto = nome + " da Silva"
+    geracao = "Millenium"
+    function getAnoNascimento() {
+        idade2 = 20
+        let ano = 2022 - idade2
+        return ano
+    }
+    let anoDeNascimento = getAnoNascimento()
+    if (anoDeNascimento <= 1995) {
+        geracao = "geração X"
+    }
+    console.log("Nome completo: " + nomeCompleto)
+    console.log("Ano de Nascimento: " + anoDeNascimento)
+    console.log("Geração: " + geracao)
+}
+
+// 1.6.3
+
+
+function teste() {
+    try {
+        console.log("Entrou no try")
+        if (1 != 2) {
+            throw new Error("Deu ruim")
+        }
+    } catch (error) {
+        console.log("Entrou no catch")
+        console.log(error)
+    }
+}
+
+
+function ConfirmarDados3(nome) {
+    try {
+        var nomeCompleto = nome + ' da Silva'
+        function getAnoNascimento() {
+            if (!idade) {
+                throw new Error("Um erro foi encontrado e não foi possível concluir a operação")
+            } else {
+                var idade = 20
+                var ano = 2023 - idade
+                return ano
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    console.log('Nome completo: ', nomeCompleto)
+    console.log('Ano de nascimento: ', getAnoNascimento())
+    console.log('Idade: ', idade)
+}
+
+//  1.6.4
+
+function ConfirmarDados4(nome, idade) {
+    let nomeCompleto = nome + " da Silva"
+    function getAnoNascimento() {
+        let ano = 2022 - idade
+        return ano
+    }
+    let anoDeNascimento = getAnoNascimento()
+
+    function geracaoPertence(anoDeNascimento) {
+        if (anoDeNascimento < 1980) {
+            return "geração X"
+        } else {
+            return "Millenium"
+        }
+    }
+    let geracao2 = geracaoPertence(anoDeNascimento)
+
+    console.log("Nome completo: " + nomeCompleto)
+    console.log("Ano de Nascimento: " + anoDeNascimento)
+    console.log("Geração: " + geracao2)
 }
