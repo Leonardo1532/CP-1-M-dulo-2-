@@ -212,3 +212,38 @@ function ConfirmarDados4(nome, idade) {
     console.log("Ano de Nascimento: " + anoDeNascimento)
     console.log("Geração: " + geracao2)
 }
+
+function AumentoSalarial(salarioBase) {
+    let salarioBase1 = salarioBase
+    let salarioAumentado = 0
+    try {
+        if (typeof salarioBase1 == "string") {
+            throw new Error("O salário informado não foi um Number")
+        } else if (typeof salarioBase1 == "number") {
+            switch (true) {
+                case salarioBase1 <= 1500:
+                    salarioAumentado = salarioBase1 + (salarioBase1 * 0.2)
+                    console.log("O salário com aumento é: " + salarioAumentado)
+                    break;
+
+                case salarioBase1 >= 1501 && salarioBase1 <= 2000:
+                    salarioAumentado = salarioBase1 + (salarioBase1 * 0.15)
+                    console.log("O salário com aumento é: " + salarioAumentado)
+                    break;
+
+                case salarioBase1 >= 2001 && salarioBase1 <= 3000:
+                    salarioAumentado = salarioBase1 + (salarioBase1 * 0.1)
+                    console.log("O salário com aumento é: " + salarioAumentado)
+                    break;
+
+                case salarioBase1 >= 3001:
+                    salarioAumentado = salarioBase1 + (salarioBase1 * 0.05)
+                    console.log("O salário com aumento é: " + salarioAumentado)
+                    break;
+            }
+        }
+    } catch (error) {
+        console.log(error)
+    }
+    console.log(typeof salarioBase1)
+}
